@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo', #django connector with MongoDB
         'NAME': 'SomeName',
-        'HOST': 'SomeHost'
+        'HOST': 'SomeHost',
         'USER': 'SomeUser',
         'PASSWORD': 'SomePass',
     }
