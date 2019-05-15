@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from app.entities import CalcRequest
 
 
 def index(request):
@@ -8,9 +9,9 @@ def index(request):
 def calc(request):
     task = request.POST.get('task')
     try:
-        number = float(task)
+        calc_request = CalcRequest(task)
         context = {
-            'number': number,
+            'number': calc_request.calc(),
         }
         return render(request, 'app/result.html', context)
     except:
